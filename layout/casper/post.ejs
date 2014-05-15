@@ -16,6 +16,11 @@
       <% if (post.tags && post.tags.length){ %> on <% post.tags.forEach(function(tag) { %><a href='<%= config.root + tag.path %>' style='margin:0 5px;'><%= tag.name %></a><% }); %><% } %>
     </span>
     <h1 class="post-title"><%- post.title %></h1>
+    <article>
+      <% if (page.features) { %>
+        <img src="/static/img/features/<%- page.features[0] %>" style="width:100%;" />
+      <% } %>
+    </article>
     <section class="post-content">
       <%- post.content %>
     </section>
